@@ -1,0 +1,491 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Primera Aplicacion</title>
+
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/1.min.css"/>
+<!--<link rel="stylesheet" href="css/jquery-mobile.icons-1.4.5.min.css"/>
+<link rel=""stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>-->
+
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('imagenes/contaminacion2.jpg','imagenes/causa2.jpg','imagenes/consecuencia2.jpg')">
+
+<div data-role="page" id="Principal" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>La contaminación</h1>
+</div>
+<div data-role="main" class="ui-content"></div>
+<div>
+<ul data-role="listview" data-theme="b" class="ui-listview ui-group-theme-b">
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Que es la contaminacion</h2>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Tipos de contaminacion</h2>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Calentamiento global</h2>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Las 3 R</h2>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Medidas de prevencion</h2>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Contaminacion en mi entorno</h2>
+</a>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Medidas de prevencion</h2>
+</a>
+</li>
+</li>
+</ul>
+</div>
+<div data-role="footer" align="center" data-theme="a" data-position="fixed">
+<div>
+<img src="imagenes/persona_azul.png" width="46" height="46">
+</div>
+<div>
+<h4>Aplicacion Tres</h4>
+<h4>Luis Jacobo Rosales Velazco</h4>
+</div>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1 align="center">Que es la contaminación?</h1>
+<div data-role="content" align="center">
+  <h2>La contaminación es uno de los males de la actualidad, ya que el deterioro constante del medio ambiente a través de sustancias perjudiciales o por el aumento descontrolado de las propias del ambiente, estas sustancias alteran y producen un desequilibrio  o resultado nocivo para el ecosistema.</h2>
+
+<div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>Contaminacion</h1>
+  <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','imagenes/contaminacion2.png',1)"><img src="imagenes/contaminacion1.png" width="603" height="415" id="Image2"></a> 
+  
+<div data-role="footer" data-theme="a" data-position="fixed">
+<h4 align="center">Aplicacion Tres,RVLJ</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1 align="center">Tipos de contaminación</h1>
+<div data-role="content" align="center">
+<div>
+  <p>Diferentes tipos de contaminación están clasificados por su parte que afectan o resultan por las causas de contaminación particulares. Cada uno de estos tipos tiene sus propias causas y consecuencias distintivas. El estudio de la contaminación ambiental ayuda a entender los conceptos básicos con mayor detalle y producir protocolos para los tipos específicos. En consecuencia, los principales tipos de contaminación son:</p>
+  <ul>
+    <li>
+      <div align="left"><em>Contaminación del Agua</em> <img src="imagenes/c.agua.png" width="336" height="185"></div>
+    </li>
+    <li>
+      <div align="left"><em>Contaminación del Aire</em><img src="imagenes/c.aire.png" width="372" height="223"></div>
+    </li>
+    <li>
+      <div align="left"><em>Contaminación del Suelo</em><img src="imagenes/c.suelo.png" width="374" height="244"></div>
+    </li>
+    <li>
+      <div align="left"><em>Contaminación Térmica</em><img src="imagenes/c.termica.png" width="419" height="251"></div>
+    </li>
+    <li>
+      <div align="left"><em>La Contaminación radiactiva</em><img src="imagenes/c.radio.png" width="354" height="247"></div>
+    </li>
+    <li>
+      <div align="left"><em>Contaminación Acústica</em><img src="imagenes/c.acus.png" width="331" height="216"></div>
+    </li>
+    <li>
+      <div align="left"><em>Contaminación Lumínica</em><img src="imagenes/c.luminica.png" width="333" height="228"></div>
+    </li>
+    </ul>
+  <p>&nbsp;</p>
+</div>
+  </div>
+<div data-role="footer" data-theme="a" data-position="fixed">
+<h4 align="center">Aplicacion Tres,RVLJ </h4>
+</div>
+</div>
+</div>
+
+
+
+<div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1 align="center">Calentamiento global</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<div>
+  <p>El calentamiento global es un problema grande hoy en día.  Muchos científicos están tratando de buscar soluciones, pero el problema es tan malo que ya tiene efectos en la tierra. La explicación más simple del calentamiento global es que cada año, la temperatura de atmósfera sube un poco.  En un año no puede afectar la tierra en maneras drásticas, pero después de muchos años, hemos visto cosas horribles. Los glaciares se están derritiendo, algunos animales están muriendo, y las selvas se están quemando. La única manera que la tierra sea salvada es si nosotros ayudamos. Necesitamos comprender el calentamiento global, las causas, los efectos, y las cosas que podemos hacer para reducir los efectos de este problema.Normalmente esta son las causas y las concecuencias del calentamiento:</p>
+  <h2><strong>Causas:</strong></h2>
+  <ul>
+    <li>
+      <div align="left">Uso de combustibles fósiles (carbón y petróleo) como fuentes de energía en la industria y el transporte.</div>
+    </li>
+    <li>
+      <div align="left">El exceso de incendios forestales, motivado por la mano del hombre, contribuyen en la aceleración del proceso del calentamiento global.</div>
+    </li>
+    <li>
+      <div align="left">La quema de combustibles fósiles, carbón, petróleo y gas, y la destrucción de bosques, se han convertido en las principales causas de la emisión a la atmósfera de dióxido de carbono (CO2), el gas más peligroso en la generación del efecto invernadero.</div>
+    </li>
+    <li>
+      <div align="left">La actividad Ganadera.</div>
+    </li>
+    <li>
+      <div align="left">Descomposición de la basura.</div>
+    </li>
+    </ul>
+    
+  <div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>Causas</h1>
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','imagenes/causa2.png',1)"><img src="imagenes/causa1.png" width="566" height="349" id="Image10"></a> 
+</div>
+  </div>
+  
+  <h2><strong>Consecuencias:</strong></h2>
+  <ul>
+    <li>
+      <div align="left">Subida en el nivel del mar.</div>
+    </li>
+    <li>
+      <div align="left">Cambios en los ecosistemas.</div>
+    </li>
+    <li>
+      <div align="left">Alteración en el ciclo de producción de los alimentos.</div>
+    </li>
+    <li>
+      <div align="left">Modificación del ciclo hidrológico.</div>
+    </li>
+    <li>
+      <div align="left">Extinción de especies animales y vegetales.</div>
+    </li>
+    <li>
+      <div align="left">Aumento de la temperatura y la concentración de CO2.</div>
+    </li>
+    <li>
+      <div align="left">Modificación de los ciclos reproductivos de especies animales y vegetales.</div>
+    </li>
+    <li>
+      <div align="left">Invasión de las zonas no intervenidas.</div>
+    </li>
+    <li>
+      <div align="left">Desertificación de tierras.</div>
+    </li>
+    <li>
+      <div align="left">Calentamiento de los mares tropicales y templados.</div>
+    </li>
+    <li>
+      <div align="left">Intensificación de los fenómenos climáticos (huracanes,tormentas).</div>
+    </li>
+    <li>
+      <div align="left">Incremento en la población de enfermedades respiratorias y de la piel.</div>
+    </li>
+    <li>
+      <div align="left">Deshielo de los glaciares.</div>
+    </li>
+    <li>
+      <div align="left">Incremento en las inundaciones.</div>
+    </li>
+    <li>
+      <div align="left">Modificación de los nichos ecológicos.</div>
+    </li>
+    <li>
+      <div align="left">Reducción del agua potable.</div>
+    </li>
+  </ul>
+  
+  <div data-role="collapsible" data-content-theme="false">
+<h1>Causas</h1>
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','imagenes/consecuencia2.png',1)"><img src="imagenes/consecuencia1.png" width="600" height="551" id="Image11"></a> </div>
+  </div>
+  
+</div>
+</div>
+<div data-role="footer" data-theme="a" data-position="fixed">
+<h4>Aplicacion Tres, RVLJ</h4>
+</div>
+</div>
+</div>
+
+
+
+<div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1 align="center">Las 3 R</h1>
+</div>
+<div data-role="content" align="center">
+  <h3 align="justify"><strong><img src="imagenes/reduce.png" width="684" height="446"></strong></h3>
+  <h3 align="justify"><strong>Reducir</strong></h3>
+  <ol>
+    <li>
+      <div align="left">Implementar la firma verde promovida por NOMBRE EMPRESA en el mail.</div>
+    </li>
+    <li>
+      <div align="left">Utilizar papel reciclado certificado.</div>
+    </li>
+    <li>
+      <div align="left">Imprimir estrictamente lo necesario; No imprimir solo para leer unos cuantos renglones; en cuestión de autorizaciones se puede hacer vía mail.</div>
+    </li>
+    <li>
+      <div align="left">Antes de imprimir verificar la ortografía y configurar correctamente los márgenes de página. 35% de las impresiones, son de índole innecesario por error de configuración.</div>
+    </li>
+    <li>
+      <div align="left">Recoger de inmediato los documentos que se manden a imprimir. 20% de las impresiones son aquellas que se mandan a imprimir y se dejan sin recoger.</div>
+    </li>
+    <li>
+      <div align="left">Utilizar carpetas electrónicas para la difusión de información. Es más fácil de difundir y puede estar disponible para todos. En casos de que el personal no cuente con computadora, se puede imprimir un solo juego para un cierto número de personas.</div>
+    </li>
+    <li>
+      <div align="left">Usar tóners de la marca de las impresionas; llamar al proveedor de la marca cuando se termine el tóner, para que se lo lleve y pueda ser reusado.</div>
+    </li>
+  </ol>
+  
+   <div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>Reducir</h1>
+<img src="imagenes/re1.png" width="336" height="372"> </div>
+  </div>
+  
+  <div align="left"></div>
+<h3 align="justify"><strong>Reutilizar</strong></h3>
+  <ol>
+    <li>
+      <div align="left">Al utilizar una caja, buscar la manera de reutilizarla para próximas entregas o almacenamiento de documentos.</div>
+    </li>
+    <li>
+      <div align="left">No las maltrates para que puedan ser reutilizadas.</div>
+    </li>
+    <li>
+      <div align="left">Al terminar de utilizar una caja, dejarla en el área de almacén; por igual, cuando se requiera de una caja, solicitarla en la misma area.</div>
+    </li>
+    <li>
+      <div align="left">Evitar el uso de grapas en sobres y hojas; esta acción aparte de facilitar el reúso de las hojas, favorecerá la reutilización de los mismo clips.</div>
+    </li>
+    <li>
+      <div align="left">Membretar los sobres de manera discreta para que puedan ser reutilizados en envois.</div>
+    </li>
+    <li>
+      <div align="left">Al dejar de usar algún sobre, por favor colocarlo en la bandeja en el área de impresiones que dice &ldquo;Sobres&rdquo;.</div>
+    </li>
+    <li>
+      <div align="left">Al imprimir / utilizar una hoja de papel de papel por un lado, dejar las hojas en el área de impresoras que dice &ldquo;Hojas para Reúso&rdquo;.</div>
+    </li>
+    <li>
+      <div align="left">Las hojas que se utilizarán para reúso, deberán tener tachada la información que ya fue utilizada.</div>
+    </li>
+    <li>
+      <div align="left">Aquellas hojas que ya fueron utilizadas por los dos lados, por favor dejarlas en el área de impresoras que dice &ldquo;Hojas impresas por los dos lados&rdquo;.</div>
+    </li>
+    <li>
+      <div align="left">NO poner hojas en cualquier bandeja con clips ó grapas.</div>
+    </li>
+    <li>
+      <div align="left">Cualquier producto hecho de papel, como periódico, revistas, secciones amarillas, libros etc., deberá dejarse en el área de impresión en donde dice &ldquo;Otros productos de papel&rdquo;.</div>
+    </li>
+    <li>
+      <div align="left">No debe de haber ningún producto de papel en el bote de basura personal a menos que se trate de:</div>
+    </li>
+  </ol>
+  <div align="left">
+    <ul>
+      <li>Papel térmico para fax.</li>
+      <li>Etiquetas adhesivas.</li>
+      <li>Cartones encerados (como los de las bebidas).</li>
+      <li>Papel higiénico.</li>
+      <li>Papel encerado ó parafinado.</li>
+      <li>Cajas de pizzas ó con alimento.  </li>
+    </ul>
+  </div>
+  
+   <div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>Reutilizar</h1>
+<img src="imagenes/reutiliza.png" width="500" height="290"> </div>
+  </div>
+  
+  <h2 align="justify"><strong>Reciclar</strong></h2>
+  <p align="justify">Todo papel ó cartón que ya no pueda ser reutilizado deberá de tener un tratamiento de reciclaje.<br>
+    Al acumularse el papel en el área de impresiones, éste de deberá de almacenar en un lugar libre de agua o humedad; lo mismo sucederá para el cartón.</p>
+  <p align="justify">Es responsable de cada sucursal buscar a un proveedor autorizado, que le de el tratamiento adecuado al papel y al cartón; junto con él definirán cada cuando vendrá a recoger lo que se haya acumulado.</p>
+  <p align="justify"><strong>Envases y Plástico.</strong><br>
+    Resumen de Impacto.</p>
+  <p align="justify">Entendemos por Envases y Botes, aquellos materiales tales como latas (refresco, de conserva etc.), botes Tetrabrik y botellas de plástico y de vidrio. Es importante el reciclado de estos materiales pues para fabricarlos, de alguna u otra manera, son los que más contaminan al planeta, pues para producir una tonelada se gasta más de 15,000 Kwh, se producen 5 toneladas de residuos minerales que van al suelo, y vapores que producen lluvia ácida.<br>
+    El vidrio, se puede reciclar hasta 40 ó 50 veces; en promedio, estos materiales tardan entre 300 y 600 años en degradarse si no se les da un tratamiento especial.</p>
+  <p align="justify">&nbsp;</p>
+  
+   <div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>Reciclar</h1>
+<img src="imagenes/recicla.png" width="640" height="370"> </div>
+  </div>
+  
+</div>
+</div>
+<div data-role="footer" data-theme="a" data-position="fixed">
+<h4 align="center">Aplicacion Tres, RVLJ</h4>
+</div>
+
+
+
+<div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1 align="center">Medidas de prevencion</h1>
+</div>
+<div data-role="content" align="center">
+  <p align="left">Yo proponque que podemosutilizar las siguientes medidas:</p>
+  <p align="left">1. Reducir el individual y promocionar los medios colectivos. <br>
+    <br>
+    2.  Disminuir su gasto con electrodomésticos de etiqueta energética o apagando los aparatos completamente (y no en modo standby). <br>
+    <br>
+    3. Favorecer la separación de basuras y el reciclaje<br>
+    . <br>
+    4. Reutilizarlos siempre que se pueda (papel, juguetes, herramientas, muebles…) y evitar usar bolsas, cajas y embalajes. <br>
+    <br>
+    5. Reducir su consumo colocando, por ejemplo, botellas en las cisternas. <br>
+    <br>
+    6. Minimizar el riego de jardines y promocionar el sistema por goteo. <br>
+    <br>
+    7.  Sólo donde se sepa que habrá agua suficiente a largo plazo. En muchas ocasiones se otorgan licencias donde no hay agua. <br>
+    <br>
+    8.  Respetar los espacios protegidos y minimizar el impacto en zonas naturales. <br>
+    <br>
+    9. Construirlas con buenos materiales aislantes térmicos para que la inversión en calefacción y el aire acondicionado sea menor <br>
+    <br>
+    10.  Mejorar los aislantes en ventanas y puertas porque entre un 5% y un 10% del calor del hogar se escapa por ellas. <br>
+    <br>
+    11. Paneles solares fotovoltaicos conectados a la red eléctrica. <br>
+    <br>
+    12.Darles más valor y estar dispuestos a financiarlas. Si todos las apoyamos, serán rentables, aunque sean más caras. <br>
+    <br>
+    <br>
+    13. Minimizar los cambios de uso del suelo y, en general, del suelo artificial. <br>
+    <br>
+    14.  Dar más importancia a los análisis de impacto ambiental y considerar otras alternativas costosas, pero ambientalmente favorables<br>
+    <br>
+    15.  No trasladarlas fuera de su lugar de origen. <br>
+    <br>
+    16. No soltar animales domésticos y mascotas. Pueden ser especies invasoras. <br>
+    <br>
+    17.  Minimizar el uso de compuestos químicos como antibióticos, fertilizantes… y aerosoles. <br>
+    <br>
+    18. Educar a los niños en el valor de los bienes que nos ofrecen los ecosistemas.<br>
+    <br>
+    19.  Exigir la gestión sostenible a largo plazo de los recursos naturales.</p>
+  <p align="left">&nbsp;</p>
+</div>
+</div>
+<div data-role="footer" data-theme="a" data-position="fixed">
+<h4 align="center">Aplicacion Tres,RVLJ</h4>
+</div>
+</div>
+
+<div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1 align="center">Contaminación en mi entorno</h1>
+</div>
+<div data-role="content" align="center">
+  <!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><img src="data1/images/1.png" alt="1" title="1" id="wows1_0"/></li>
+		<li><img src="data1/images/2.png" alt="2" title="2" id="wows1_1"/></li>
+		<li><img src="data1/images/3.png" alt="3" title="3" id="wows1_2"/></li>
+		<li><img src="data1/images/4.png" alt="4" title="4" id="wows1_3"/></li>
+		<li><img src="data1/images/5.png" alt="5" title="5" id="wows1_4"/></li>
+		<li><img src="data1/images/6.png" alt="6" title="6" id="wows1_5"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="1"><span><img src="data1/tooltips/1.png" alt="1"/>1</span></a>
+		<a href="#" title="2"><span><img src="data1/tooltips/2.png" alt="2"/>2</span></a>
+		<a href="#" title="3"><span><img src="data1/tooltips/3.png" alt="3"/>3</span></a>
+		<a href="#" title="4"><span><img src="data1/tooltips/4.png" alt="4"/>4</span></a>
+		<a href="#" title="5"><span><img src="data1/tooltips/5.png" alt="5"/>5</span></a>
+		<a href="#" title="6"><span><img src="data1/tooltips/6.png" alt="6"/>6</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">jquery slider</a> by WOWSlider.com v8.7</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+  <p>&nbsp;</p>
+  <p>En mi localidad se junta mucho la basura por que los negocios de comida y los que venden en el mercado tiran demaciada basura
+  </p>
+</div>
+</div>
+<div data-role="footer" data-theme="a" data-position="fixed">
+<h4 align="center">Aplicacion Tres,RVLJ  </h4>
+</div>
+<div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1 align="center">Medidas de prevención</h1>
+</div>
+<div data-role="content" align="center">Yo pienso que se pueden hacer coolectivas en la comunidad para poder quitar toda la basura 
+<p>Esta es una pagina que nos ayuda a poder continuar con nuestro trabajo</p>
+<p><img src="imagenes/logo_fundacion_v5.png" width="300" height="52" alt="1"></p>
+<p><a href="http://www.biosfera.org/">Fundacion Biosfera</a></p>
+
+</div>
+</div>
+<div data-role="footer" data-theme="a" data-position="fixed">
+<h4 align="center">Aplicacion Tres,RVLJ</h4>
+</div>
+</div>
+
+</body>
+</html>
